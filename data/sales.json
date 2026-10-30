@@ -1,11 +1,49 @@
 {
-  "updatedAt": "2026-10-30T14:38:56Z",
-  "dateRange": { "from": "1-Nov-2026", "to": "30-Nov-2026" },
-  "totals": { "sales": 80850500, "entries": 116, "open": 56, "awaiting": 14, "closed": 27, "target": 70000000 },
+  "dateRange": {
+    "from": "1-Nov-2026",
+    "to": "30-Nov-2026"
+  },
   "salespeople": [
-    { "name": "Kofi", "entries": 41, "open": 24, "awaiting": 3, "closed": 8, "sales": 30140000 },
-    { "name": "Deepak", "entries": 5, "open": 0, "awaiting": 0, "closed": 5, "sales": 27462500 },
-    { "name": "Aanjh", "entries": 58, "open": 28, "awaiting": 11, "closed": 6, "sales": 1100000 },
-    { "name": "Manish", "entries": 12, "open": 4, "awaiting": 0, "closed": 8, "sales": 22148000 }
-  ]
+    {
+      "awaiting": 3,
+      "closed": 8,
+      "entries": 41,
+      "name": "KARAN",
+      "open": 24,
+      "sales": 40140000
+    },
+    {
+      "awaiting": 0,
+      "closed": 5,
+      "entries": 5,
+      "name": "DEEPAK",
+      "open": 0,
+      "sales": 27462500
+    },
+    {
+      "awaiting": 11,
+      "closed": 6,
+      "entries": 58,
+      "name": "AANJH",
+      "open": 28,
+      "sales": 1100000
+    },
+    {
+      "awaiting": 0,
+      "closed": 8,
+      "entries": 12,
+      "name": "MANISH",
+      "open": 4,
+      "sales": 22148000
+    }
+  ],
+  "totals": {
+    "awaiting": 14,
+    "closed": 27,
+    "entries": 116,
+    "open": 56,
+    "sales": 90850500,
+    "target": 70000000
+  },
+  "updatedAt": "2026-10-30T20:16:12.757Z"
 }
