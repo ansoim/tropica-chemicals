@@ -29,6 +29,14 @@
       "sales": 1100000
     },
     {
+      "awaiting": 4,
+      "closed": 3,
+      "entries": 45,
+      "name": "Piyush",
+      "open": 4,
+      "sales": 1100000
+    },
+    {
       "awaiting": 0,
       "closed": 8,
       "entries": 12,
@@ -38,12 +46,12 @@
     }
   ],
   "totals": {
-    "awaiting": 14,
-    "closed": 27,
-    "entries": 116,
-    "open": 56,
-    "sales": 90850500,
+    "awaiting": 18,
+    "closed": 30,
+    "entries": 161,
+    "open": 60,
+    "sales": 91950500,
     "target": 70000000
   },
-  "updatedAt": "2026-10-30T20:25:32.598Z"
+  "updatedAt": "2026-10-30T20:26:19.979Z"
 }
