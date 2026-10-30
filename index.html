@@ -185,6 +185,8 @@ renderDashboard = function(feed) {
 // Visual/local preview only. Browser-side credentials are visible in the downloaded page and are not secure authentication. (removed from here)
 
 // Persistent login for Tropica Dashboard
+
+// Persistent login for Tropica Dashboard
 (() => {
   const allowedUsers = new Set([
     'deepak@tropica',
@@ -200,19 +202,18 @@ renderDashboard = function(feed) {
   const loginScreen = document.getElementById('loginScreen');
   const form = document.getElementById('loginForm');
 
-  // Unlock dashboard if the user has already logged in
+  if (!loginScreen || !form) {
+    console.error('Login elements not found.');
+    return;
+  }
+
   function unlockDashboard() {
     loginScreen.remove();
     document.body.classList.remove('login-locked');
   }
 
-  // Check saved login when the page loads
-  if (localStorage.getItem(LOGIN_KEY) === 'true') {
-    unlockDashboard();
-  }
-
-  // Handle login
-  form.addEventListener('submit', event => {
+  // Register submit handler BEFORE checking browser storage.
+  form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const user = document.getElementById('loginUser')
@@ -221,17 +222,29 @@ renderDashboard = function(feed) {
     const password = document.getElementById('loginPassword').value;
     const error = document.getElementById('loginError');
 
-    if (allowedUsers.has(user) && password === '1122334455') {
+    error.textContent = '';
 
-      // Save login status in browser
-      localStorage.setItem(LOGIN_KEY, 'true');
+    if (allowedUsers.has(user) && password === 'YOUR_EXISTING_PASSWORD') {
+      try {
+        localStorage.setItem(LOGIN_KEY, 'true');
+      } catch (e) {
+        console.warn('Browser storage unavailable:', e);
+      }
 
       unlockDashboard();
-
     } else {
       error.textContent =
         'User ID or password is incorrect. Please try again.';
     }
   });
+
+  // Check previous login safely.
+  try {
+    if (localStorage.getItem(LOGIN_KEY) === 'true') {
+      unlockDashboard();
+    }
+  } catch (e) {
+    console.warn('Could not read browser storage:', e);
+  }
 
 })();
