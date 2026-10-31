@@ -37,6 +37,14 @@
       "sales": 1100000
     },
     {
+      "awaiting": 4,
+      "closed": 1,
+      "entries": 2,
+      "name": "Rahul",
+      "open": 3,
+      "sales": 5000000
+    },
+    {
       "awaiting": 0,
       "closed": 8,
       "entries": 12,
@@ -46,12 +54,12 @@
     }
   ],
   "totals": {
-    "awaiting": 18,
-    "closed": 30,
-    "entries": 161,
-    "open": 60,
-    "sales": 91950500,
+    "awaiting": 22,
+    "closed": 31,
+    "entries": 163,
+    "open": 63,
+    "sales": 96950500,
     "target": 70000000
   },
-  "updatedAt": "2026-10-30T20:26:19.979Z"
+  "updatedAt": "2026-10-31T00:52:27.425Z"
 }
