@@ -233,8 +233,13 @@ renderDashboard = function(feed) {
 };
 </script><script type="module" src="assets/trophies.js" onerror="console.error('[Tropica trophy] Failed to load assets/trophies.js as an ES module. Check the relative asset path and JavaScript MIME type.',event)"></script><script>
 (function () {
-  var allowed = ['deepak@tropica','koffi@tropica','aanjh@tropica','manish@tropica','ansoim@tropica','admin@tropica'];
+  // Always allowed. Everyone else signs in as their name from the sales summary + @tropica
+  // (e.g. "Karan" -> karan@tropica). Remove a person from the summary and their ID stops working.
+  var FIXED_USERS = ['admin@tropica', 'ansoim@tropica'];
+  var PASSWORD = '1122334455';
+  var DOMAIN = '@tropica';
   var KEY = 'tropica_dashboard_login_at';          // time of last successful sign-in
+  var USER_KEY = 'tropica_dashboard_login_user';   // who signed in
   var OLD_KEY = 'tropica_dashboard_logged_in';     // older version of the login, no longer trusted
   var SESSION_MS = 8 * 60 * 60 * 1000;             // ask for User ID and password again after 8 hours
 
@@ -244,16 +249,44 @@ renderDashboard = function(feed) {
     document.body.classList.remove('login-locked');
   }
 
+  function idFromName(name) {
+    var n = String(name || '').trim().toLowerCase().replace(/\s+/g, '');
+    return n ? n + DOMAIN : '';
+  }
+
+  function idsFromList(list) {
+    var ids = [];
+    (list || []).forEach(function (r) {
+      var id = idFromName(r && r.name);
+      if (id && ids.indexOf(id) === -1) ids.push(id);
+    });
+    return ids;
+  }
+
+  function savedUser() {
+    try { return localStorage.getItem(USER_KEY) || ''; } catch (e) { return ''; }
+  }
+
   function loginValid() {
     try {
       var at = Number(localStorage.getItem(KEY));
       var age = Date.now() - at;
-      return at > 0 && age >= -60000 && age < SESSION_MS;
+      return at > 0 && age >= -60000 && age < SESSION_MS && !!savedUser();
     } catch (e) { return false; }
   }
 
   function clearLogin() {
-    try { localStorage.removeItem(KEY); localStorage.removeItem(OLD_KEY); } catch (e) {}
+    try {
+      localStorage.removeItem(KEY);
+      localStorage.removeItem(USER_KEY);
+      localStorage.removeItem(OLD_KEY);
+    } catch (e) {}
+  }
+
+  function fetchEmployeeIds() {
+    return fetch('data/sales.json?fresh=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (j) { return idsFromList(j && j.salespeople); });
   }
 
   var form = document.getElementById('loginForm');
@@ -261,6 +294,13 @@ renderDashboard = function(feed) {
   // Returning visitor: unlock only if the last sign-in was less than 8 hours ago.
   try { localStorage.removeItem(OLD_KEY); } catch (e) {}
   if (loginValid()) unlock(); else clearLogin();
+
+  // Once the dashboard data has loaded, sign out anyone who is no longer in the sales summary.
+  document.addEventListener('tropica:data-ready', function () {
+    var user = savedUser();
+    if (!user || FIXED_USERS.indexOf(user) !== -1 || typeof data === 'undefined') return;
+    if (idsFromList(data).indexOf(user) === -1) { clearLogin(); location.reload(); }
+  });
 
   // If the page stays open (for example on a TV), lock it again once the 8 hours are over.
   setInterval(function () {
@@ -272,16 +312,37 @@ renderDashboard = function(feed) {
 
   if (!form) return;
 
+  var errorBox = document.getElementById('loginError');
+  var submitBtn = form.querySelector('button[type="submit"]');
+
+  function succeed(user) {
+    try {
+      localStorage.setItem(KEY, String(Date.now()));
+      localStorage.setItem(USER_KEY, user);
+    } catch (err) {}
+    unlock();
+  }
+
+  function fail(message) {
+    errorBox.textContent = message || 'User ID or password is incorrect. Please try again.';
+    if (submitBtn) submitBtn.disabled = false;
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var u = document.getElementById('loginUser').value.trim().toLowerCase();
-    var p = document.getElementById('loginPassword').value;
-    if (allowed.indexOf(u) !== -1 && p === '1122334455') {
-      try { localStorage.setItem(KEY, String(Date.now())); } catch (err) {}
-      unlock();
-    } else {
-      document.getElementById('loginError').textContent = 'User ID or password is incorrect. Please try again.';
-    }
+    errorBox.textContent = '';
+    var user = document.getElementById('loginUser').value.trim().toLowerCase();
+    var pass = document.getElementById('loginPassword').value;
+
+    if (pass !== PASSWORD) { fail(); return; }
+    if (FIXED_USERS.indexOf(user) !== -1) { succeed(user); return; }
+
+    if (submitBtn) submitBtn.disabled = true;
+    fetchEmployeeIds().then(function (ids) {
+      if (ids.indexOf(user) !== -1) succeed(user); else fail();
+    }).catch(function () {
+      fail('Could not check the team list right now. Please try again in a moment.');
+    });
   });
 })();
 </script></body></html>
