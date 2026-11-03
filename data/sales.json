@@ -5,45 +5,53 @@
   },
   "salespeople": [
     {
-      "awaiting": 3,
-      "closed": 8,
-      "entries": 41,
-      "name": "Koffi",
-      "open": 24,
-      "sales": 30275000
+      "awaiting": 0,
+      "closed": 2,
+      "entries": 8,
+      "name": "KOFI",
+      "open": 5,
+      "sales": 6002400
     },
     {
-      "awaiting": 0,
-      "closed": 5,
-      "entries": 5,
+      "awaiting": 1,
+      "closed": 0,
+      "entries": 4,
       "name": "DEEPAK",
-      "open": 0,
-      "sales": 27462500
+      "open": 1,
+      "sales": 0
     },
     {
-      "awaiting": 11,
-      "closed": 6,
-      "entries": 58,
+      "awaiting": 4,
+      "closed": 0,
+      "entries": 13,
       "name": "AANJH",
-      "open": 28,
-      "sales": 1100000
+      "open": 7,
+      "sales": 0
     },
     {
       "awaiting": 0,
-      "closed": 8,
-      "entries": 12,
+      "closed": 3,
+      "entries": 3,
       "name": "MANISH",
-      "open": 4,
-      "sales": 22148000
+      "open": 0,
+      "sales": 11620000
+    },
+    {
+      "awaiting": 0,
+      "closed": 0,
+      "entries": 0,
+      "name": "Follow-up period: 01-Nov-2026 to 30-Nov-2026. October records are kept in the October tracker. Use the \"Next Follow-up\" column on each log to schedule the next call or visit.",
+      "open": 0,
+      "sales": 0
     }
   ],
   "totals": {
-    "awaiting": 14,
-    "closed": 27,
-    "entries": 116,
-    "open": 56,
-    "sales": 80985500,
-    "target": 70000000
+    "awaiting": 5,
+    "closed": 5,
+    "entries": 28,
+    "open": 13,
+    "sales": 17622400,
+    "target": -17622400
   },
-  "updatedAt": "2026-11-02T13:45:01.847Z"
+  "updatedAt": "2026-11-03T09:09:34.822Z"
 }
