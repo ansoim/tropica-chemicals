@@ -22,19 +22,19 @@
     },
     {
       "awaiting": 4,
-      "closed": 0,
-      "entries": 18,
+      "closed": 1,
+      "entries": 19,
       "name": "AANJH",
       "open": 8,
-      "sales": 0
+      "sales": 3250000
     },
     {
       "awaiting": 0,
-      "closed": 7,
-      "entries": 7,
+      "closed": 6,
+      "entries": 6,
       "name": "MANISH",
       "open": 0,
-      "sales": 24180000
+      "sales": 20930000
     }
   ],
   "totals": {
@@ -45,5 +45,5 @@
     "sales": 38934200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-05T10:30:17.713Z"
+  "updatedAt": "2026-11-05T10:33:32.856Z"
 }
