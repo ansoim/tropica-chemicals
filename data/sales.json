@@ -22,11 +22,11 @@
     },
     {
       "awaiting": 6,
-      "closed": 2,
-      "entries": 29,
+      "closed": 3,
+      "entries": 30,
       "name": "AANJH",
       "open": 14,
-      "sales": 3325000
+      "sales": 5925000
     },
     {
       "awaiting": 0,
@@ -39,11 +39,11 @@
   ],
   "totals": {
     "awaiting": 9,
-    "closed": 14,
-    "entries": 60,
+    "closed": 15,
+    "entries": 61,
     "open": 26,
-    "sales": 39009200,
+    "sales": 41609200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-05T10:52:30.500Z"
+  "updatedAt": "2026-11-05T10:53:45.327Z"
 }
