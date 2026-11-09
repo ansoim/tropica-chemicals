@@ -6,11 +6,11 @@
   "salespeople": [
     {
       "awaiting": 4,
-      "closed": 10,
-      "entries": 28,
+      "closed": 12,
+      "entries": 30,
       "name": "Koffi",
       "open": 12,
-      "sales": 15414200
+      "sales": 25814200
     },
     {
       "awaiting": 1,
@@ -35,15 +35,23 @@
       "name": "MANISH",
       "open": 0,
       "sales": 39718000
+    },
+    {
+      "awaiting": 0,
+      "closed": 1,
+      "entries": 6,
+      "name": "MAHESH",
+      "open": 0,
+      "sales": 54000
     }
   ],
   "totals": {
     "awaiting": 13,
-    "closed": 25,
-    "entries": 82,
+    "closed": 28,
+    "entries": 90,
     "open": 33,
-    "sales": 62657200,
+    "sales": 73057200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-09T09:32:23.846Z"
+  "updatedAt": "2026-11-09T09:42:43.083Z"
 }
