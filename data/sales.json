@@ -7,7 +7,7 @@
     {
       "awaiting": 4,
       "closed": 8,
-      "entries": 26,
+      "entries": 28,
       "name": "Koffi",
       "open": 12,
       "sales": 11674200
@@ -40,10 +40,10 @@
   "totals": {
     "awaiting": 13,
     "closed": 23,
-    "entries": 80,
+    "entries": 82,
     "open": 33,
     "sales": 58917200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-07T13:49:53.978Z"
+  "updatedAt": "2026-11-09T08:44:28.008Z"
 }
