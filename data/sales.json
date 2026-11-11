@@ -6,11 +6,11 @@
   "salespeople": [
     {
       "awaiting": 4,
-      "closed": 12,
-      "entries": 30,
+      "closed": 14,
+      "entries": 33,
       "name": "Koffi",
       "open": 12,
-      "sales": 25814200
+      "sales": 32314200
     },
     {
       "awaiting": 1,
@@ -47,11 +47,11 @@
   ],
   "totals": {
     "awaiting": 13,
-    "closed": 29,
-    "entries": 91,
+    "closed": 31,
+    "entries": 94,
     "open": 33,
-    "sales": 74311200,
+    "sales": 80811200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-10T09:43:04.937Z"
+  "updatedAt": "2026-11-11T10:11:31.623Z"
 }
