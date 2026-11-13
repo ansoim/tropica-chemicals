@@ -22,11 +22,11 @@
     },
     {
       "awaiting": 8,
-      "closed": 8,
-      "entries": 43,
+      "closed": 9,
+      "entries": 44,
       "name": "AANJH",
       "open": 20,
-      "sales": 6763000
+      "sales": 6778000
     },
     {
       "awaiting": 0,
@@ -38,20 +38,20 @@
     },
     {
       "awaiting": 0,
-      "closed": 2,
-      "entries": 7,
+      "closed": 4,
+      "entries": 9,
       "name": "MAHESH",
       "open": 0,
-      "sales": 729000
+      "sales": 1721000
     }
   ],
   "totals": {
     "awaiting": 13,
-    "closed": 40,
-    "entries": 103,
+    "closed": 43,
+    "entries": 106,
     "open": 33,
-    "sales": 95384200,
+    "sales": 96391200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-13T10:55:10.224Z"
+  "updatedAt": "2026-11-13T10:56:22.494Z"
 }
