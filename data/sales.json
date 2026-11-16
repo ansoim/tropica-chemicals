@@ -30,11 +30,11 @@
     },
     {
       "awaiting": 0,
-      "closed": 10,
-      "entries": 10,
+      "closed": 11,
+      "entries": 11,
       "name": "MANISH",
       "open": 0,
-      "sales": 40893000
+      "sales": 41028000
     },
     {
       "awaiting": 0,
@@ -47,11 +47,11 @@
   ],
   "totals": {
     "awaiting": 13,
-    "closed": 47,
-    "entries": 110,
+    "closed": 48,
+    "entries": 111,
     "open": 33,
-    "sales": 110066200,
+    "sales": 110201200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-16T09:43:42.760Z"
+  "updatedAt": "2026-11-16T09:49:46.329Z"
 }
