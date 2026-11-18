@@ -14,19 +14,19 @@
     },
     {
       "awaiting": 1,
-      "closed": 4,
-      "entries": 8,
+      "closed": 6,
+      "entries": 10,
       "name": "DEEPAK",
       "open": 1,
-      "sales": 4200000
+      "sales": 5468000
     },
     {
       "awaiting": 8,
-      "closed": 12,
-      "entries": 47,
+      "closed": 13,
+      "entries": 48,
       "name": "AANJH",
       "open": 20,
-      "sales": 8068000
+      "sales": 8095000
     },
     {
       "awaiting": 0,
@@ -47,11 +47,11 @@
   ],
   "totals": {
     "awaiting": 13,
-    "closed": 57,
-    "entries": 120,
+    "closed": 60,
+    "entries": 123,
     "open": 33,
-    "sales": 143118430,
+    "sales": 144413430,
     "target": 197300000
   },
-  "updatedAt": "2026-11-18T11:17:07.803Z"
+  "updatedAt": "2026-11-18T16:44:36.031Z"
 }
