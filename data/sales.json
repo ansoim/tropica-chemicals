@@ -38,20 +38,20 @@
     },
     {
       "awaiting": 0,
-      "closed": 4,
-      "entries": 9,
+      "closed": 5,
+      "entries": 10,
       "name": "MAHESH",
       "open": 0,
-      "sales": 1721000
+      "sales": 3801000
     }
   ],
   "totals": {
     "awaiting": 13,
-    "closed": 53,
-    "entries": 116,
+    "closed": 54,
+    "entries": 117,
     "open": 33,
-    "sales": 132196200,
+    "sales": 134276200,
     "target": 197300000
   },
-  "updatedAt": "2026-11-18T08:52:04.916Z"
+  "updatedAt": "2026-11-18T08:52:17.101Z"
 }
