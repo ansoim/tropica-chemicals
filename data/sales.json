@@ -14,11 +14,11 @@
     },
     {
       "awaiting": 1,
-      "closed": 6,
-      "entries": 10,
+      "closed": 9,
+      "entries": 13,
       "name": "DEEPAK",
       "open": 1,
-      "sales": 5468000
+      "sales": 7003000
     },
     {
       "awaiting": 8,
@@ -47,11 +47,11 @@
   ],
   "totals": {
     "awaiting": 13,
-    "closed": 60,
-    "entries": 123,
+    "closed": 63,
+    "entries": 126,
     "open": 33,
-    "sales": 144413430,
+    "sales": 145948430,
     "target": 197300000
   },
-  "updatedAt": "2026-11-18T16:46:02.504Z"
+  "updatedAt": "2026-11-20T08:55:01.638Z"
 }
